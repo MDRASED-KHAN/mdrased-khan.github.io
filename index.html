@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Md. Rased Khan Manon | PhD Researcher, RMIT University</title>
+<meta name="description" content="Md. Rased Khan Manon — PhD researcher at RMIT University studying behavioural plasticity and proto-cognition in shrimps; background in fish biology and microplastic pollution in aquaculture.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#14232b; --muted:#56656d; --line:#dfe6e8; --bg:#fbfcfc; --card:#ffffff;
+    --accent:#0f6e74; --accent-soft:#e3f1f1; --max:920px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;font-size:16px}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.25}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:10;background:rgba(251,252,252,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:var(--max);margin:auto;padding:.8rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+  .brand{font-family:Fraunces,Georgia,serif;font-weight:600;color:var(--ink);font-size:1.05rem}
+  .links{display:flex;gap:1.2rem;flex-wrap:wrap;font-size:.9rem}
+  .links a{color:var(--muted)}
+  .links a:hover{color:var(--accent);text-decoration:none}
+
+  /* hero */
+  header{max-width:var(--max);margin:auto;padding:4.5rem 1.5rem 3rem;display:grid;grid-template-columns:auto 1fr;gap:2.5rem;align-items:center}
+  .avatar{width:150px;height:150px;border-radius:50%;background:var(--accent-soft);display:grid;place-items:center;font-family:Fraunces,serif;font-size:2.8rem;color:var(--accent);overflow:hidden;border:4px solid #fff;box-shadow:0 2px 14px rgba(15,110,116,.15)}
+  .avatar img{width:100%;height:100%;object-fit:cover}
+  header h1{font-size:2.4rem;margin-bottom:.3rem}
+  .role{font-size:1.1rem;color:var(--muted);margin-bottom:1.2rem}
+  .role strong{color:var(--ink);font-weight:500}
+  .chips{display:flex;flex-wrap:wrap;gap:.5rem}
+  .chip{display:inline-flex;align-items:center;gap:.35rem;padding:.4rem .85rem;border:1px solid var(--line);border-radius:999px;font-size:.85rem;background:var(--card);color:var(--ink)}
+  .chip:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+  .chip.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+  .chip.primary:hover{background:#0b585d;color:#fff}
+
+  /* sections */
+  main{max-width:var(--max);margin:auto;padding:0 1.5rem 4rem}
+  section{padding:2.6rem 0;border-top:1px solid var(--line)}
+  section h2{font-size:1.55rem;margin-bottom:1.4rem}
+  .lead{font-size:1.05rem;max-width:68ch}
+  .lead + .lead{margin-top:.9rem}
+  .tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.4rem}
+  .tag{background:var(--accent-soft);color:var(--accent);padding:.3rem .75rem;border-radius:6px;font-size:.85rem;font-weight:500}
+
+  .thesis{margin-top:1.6rem;padding:1.3rem 1.5rem;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:8px}
+  .thesis .label{font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:600}
+  .thesis h3{font-size:1.2rem;margin:.3rem 0 .4rem}
+  .thesis p{color:var(--muted);font-size:.93rem}
+
+  /* timeline */
+  .tl{display:grid;gap:1.6rem}
+  .item{display:grid;grid-template-columns:150px 1fr;gap:1.5rem}
+  .when{color:var(--muted);font-size:.88rem;font-weight:500;padding-top:.15rem}
+  .item h3{font-family:Inter,sans-serif;font-size:1.02rem;font-weight:600}
+  .where{color:var(--muted);font-size:.93rem}
+  .item p.d{font-size:.93rem;margin-top:.35rem}
+  .item p.d em{color:var(--ink)}
+  .sub{font-size:1.05rem;font-family:Inter,sans-serif;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;font-size:.8rem;margin:2.2rem 0 1.2rem}
+  .sub:first-of-type{margin-top:0}
+
+  /* publications */
+  .pubs{list-style:none;display:grid;gap:1.1rem;counter-reset:p}
+  .pubs li{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:1rem 1.2rem 1rem 3.2rem;position:relative;font-size:.93rem}
+  .pubs li::before{counter-increment:p;content:counter(p);position:absolute;left:1.1rem;top:1rem;font-family:Fraunces,serif;color:var(--accent);font-weight:600}
+  .pubs .t{font-weight:600;color:var(--ink);display:block;margin-bottom:.2rem;font-size:.98rem}
+  .pubs .a{color:var(--muted)}
+  .pubs .a b{color:var(--ink);font-weight:600}
+  .pubs .v{display:block;margin-top:.25rem}
+  .pubs .v i{color:var(--ink)}
+  .badge{display:inline-block;font-size:.72rem;font-weight:600;padding:.1rem .5rem;border-radius:4px;margin-left:.4rem;background:#fff3dc;color:#8a5a00;vertical-align:middle}
+
+  /* awards & skills */
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:1.1rem 1.3rem}
+  .card h3{font-family:Inter,sans-serif;font-size:.98rem;font-weight:600;margin-bottom:.25rem}
+  .card p{font-size:.9rem;color:var(--muted)}
+  .skills{display:grid;gap:.9rem}
+  .skills div{display:grid;grid-template-columns:150px 1fr;gap:1.5rem;font-size:.95rem}
+  .skills span{color:var(--muted);font-weight:500}
+
+  footer{border-top:1px solid var(--line);text-align:center;padding:2rem 1.5rem;color:var(--muted);font-size:.85rem}
+
+  @media (max-width:680px){
+    header{grid-template-columns:1fr;text-align:center;padding-top:3rem}
+    .avatar{margin:auto;width:120px;height:120px}
+    header h1{font-size:1.9rem}
+    .chips{justify-content:center}
+    .item,.skills div{grid-template-columns:1fr;gap:.2rem}
+    .grid2{grid-template-columns:1fr}
+    .links{display:none}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-in">
+    <a class="brand" href="#">Md. Rased Khan Manon</a>
+    <div class="links">
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#publications">Publications</a>
+      <a href="#awards">Awards</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <!-- To add your photo: upload profile.jpg to the repository and replace "RK" below with <img src="profile.jpg" alt="Md. Rased Khan Manon"> -->
+  <div class="avatar">RK</div>
+  <div>
+    <h1>Md. Rased Khan Manon</h1>
+    <p class="role"><strong>PhD Researcher</strong> · Neurotoxicology Laboratory, School of Science, RMIT University, Melbourne</p>
+    <div class="chips">
+      <a class="chip primary" href="cv.pdf" target="_blank">Download CV</a>
+      <a class="chip" href="https://scholar.google.com/citations?user=k_8nOP8AAAAJ&hl=en" target="_blank">Google Scholar</a>
+      <a class="chip" href="https://orcid.org/0000-0002-2921-6716" target="_blank">ORCiD</a>
+      <a class="chip" href="https://www.researchgate.net/profile/Md-Manon" target="_blank">ResearchGate</a>
+      <a class="chip" href="https://www.linkedin.com/in/md-rased-khan-manon-270829117/" target="_blank">LinkedIn</a>
+      <a class="chip" href="https://github.com/MDRASED-KHAN" target="_blank">GitHub</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section id="about">
+  <h2>About</h2>
+  <p class="lead">I am a PhD researcher in Applied Biology &amp; Biotechnology at RMIT University, Australia, working in the Neurotoxicology Laboratory. My doctoral research explores how animals without complex brains learn, adapt and make decisions, using shrimps as a model for behavioural plasticity and proto-cognitive traits.</p>
+  <p class="lead">Before joining RMIT, I trained in fisheries science at Patuakhali Science and Technology University, Bangladesh, where my work focused on microplastic pollution in aquaculture and coastal fishes, fish population biology, and the fishery resources of Bangladesh's rivers.</p>
+  <div class="tags">
+    <span class="tag">Animal behaviour</span>
+    <span class="tag">Invertebrate cognition</span>
+    <span class="tag">Behavioural ecotoxicology</span>
+    <span class="tag">Microplastics</span>
+    <span class="tag">Aquaculture</span>
+    <span class="tag">Fish biology &amp; genetics</span>
+  </div>
+  <div class="thesis">
+    <div class="label">Current PhD project</div>
+    <h3>Minimal Minds: Decoding Behavioural Plasticity and Proto-Cognitive Traits in Shrimps</h3>
+    <p>Supervised by Professor Donald Wlodkowic (senior) and Professor Bob Wong (associate) · RMIT University · 2025 – present</p>
+  </div>
+</section>
+
+<section id="education">
+  <h2>Education</h2>
+  <div class="tl">
+    <div class="item">
+      <div class="when">2025 – present</div>
+      <div>
+        <h3>PhD in Applied Biology &amp; Biotechnology</h3>
+        <div class="where"><a href="https://www.rmit.edu.au/" target="_blank">RMIT University</a>, Melbourne, Australia</div>
+        <p class="d">Thesis: <em>Minimal Minds: Decoding Behavioural Plasticity and Proto-Cognitive Traits in Shrimps</em></p>
+      </div>
+    </div>
+    <div class="item">
+      <div class="when">2021 – 2022</div>
+      <div>
+        <h3>M.Sc. in Fisheries Biology and Genetics</h3>
+        <div class="where"><a href="https://pstu.ac.bd/departments/FBG" target="_blank">Patuakhali Science and Technology University</a>, Bangladesh · CGPA 3.83 / 4.00</div>
+        <p class="d">Thesis: <em>Identification and Quantification of Microplastics in Tilapia and Pangas collected from Aquaculture Ponds</em> · <a href="https://doi.org/10.1016/j.aquaculture.2025.742922" target="_blank">Published in Aquaculture</a></p>
+      </div>
+    </div>
+    <div class="item">
+      <div class="when">2016 – 2020</div>
+      <div>
+        <h3>B.Sc. in Fisheries (Hons.)</h3>
+        <div class="where"><a href="http://pstu.ac.bd/" target="_blank">Patuakhali Science and Technology University</a>, Bangladesh · CGPA 3.60 / 4.00</div>
+        <p class="d">Thesis: <em>Intraspecific Phenotypic Differences in Climbing Perch Anabas testudineus Populations May be Linked to Habitat Adaptations</em> · <a href="https://doi.org/10.1016/j.heliyon.2023.e17685" target="_blank">Published in Heliyon</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+
+  <div class="sub">Research</div>
+  <div class="tl">
+    <div class="item">
+      <div class="when">May 2023 – Jun 2024</div>
+      <div>
+        <h3>Research Assistant</h3>
+        <div class="where">University Grants Commission (UGC) project, Bangladesh</div>
+        <p class="d"><em>Microplastics in Valuable Fishes from the Patuakhali Coast: Seafood Safety and Public Health Concern</em></p>
+      </div>
+    </div>
+    <div class="item">
+      <div class="when">Jul 2022 – Jun 2023</div>
+      <div>
+        <h3>Research Assistant</h3>
+        <div class="where">RTC, PSTU and UGC project, Bangladesh</div>
+        <p class="d"><em>Identification and Quantification of Microplastics in Aquaculture Species: Tilapia as a Fish Model for Evaluation</em></p>
+      </div>
+    </div>
+    <div class="item">
+      <div class="when">Jul 2019 – Jun 2020</div>
+      <div>
+        <h3>Research Assistant</h3>
+        <div class="where">Fish Physiology and Conservation Lab, Patuakhali Science and Technology University</div>
+        <p class="d"><em>Current Status, Geo-spatial Distribution and Nutritional Evaluation of the Commercial Fish Silonia silondia in the Payra River</em></p>
+      </div>
+    </div>
+    <div class="item">
+      <div class="when">Jan 2019 – Jun 2019</div>
+      <div>
+        <h3>Research Assistant</h3>
+        <div class="where">Patuakhali Science and Technology University</div>
+        <p class="d"><em>Study of Fisheries Biodiversity in the Bishkhali River, Bangladesh</em></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub">Professional</div>
+  <div class="tl">
+    <div class="item">
+      <div class="when">Jul 2024 – Nov 2024</div>
+      <div>
+        <h3>Research Associate</h3>
+        <div class="where"><a href="https://dreamconsultancy.org/" target="_blank">Dream Consultancy Limited</a>, Dhaka, Bangladesh</div>
+        <p class="d">Data analysis, publication management, project coordination and research team collaboration.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="publications">
+  <h2>Publications</h2>
+  <ol class="pubs">
+    <li>
+      <span class="t">Microplastic pollution in aquaculture species: Quantification and characterization in Tilapia and Pangas</span>
+      <span class="a"><b>Manon, M.R.K.</b>, et al.</span>
+      <span class="v"><i>Aquaculture</i> (2025) 742922 · <a href="https://doi.org/10.1016/j.aquaculture.2025.742922" target="_blank">DOI</a></span>
+    </li>
+    <li>
+      <span class="t">A Poisoned Paradise: The Threat of Heavy Metals in Our Aquatic Water Bodies</span>
+      <span class="a">Ali, M.M., et al.</span>
+      <span class="v">In: <i>Global Perspectives of Toxic Metals in Bio Environs</i>, Springer, Cham (2025) <span class="badge">Book chapter</span> · <a href="https://doi.org/10.1007/978-3-031-89725-2_11" target="_blank">DOI</a></span>
+    </li>
+    <li>
+      <span class="t">Intraspecific phenotypic differences in climbing perch <i>Anabas testudineus</i> (Bloch, 1792) populations may be linked to habitat adaptations</span>
+      <span class="a"><b>Khan Manon, M.R.</b>, Alam, A., Ullah, M.R., Hossen, M.B., Sufian, M.A., Hossain, M.A., Iqbal, M.M., Rahman, M.A.</span>
+      <span class="v"><i>Heliyon</i> 9 (2023) e17685 · <a href="https://doi.org/10.1016/j.heliyon.2023.e17685" target="_blank">DOI</a></span>
+    </li>
+    <li>
+      <span class="t">Biometric indices, growth pattern, and physiological status of captive-reared indigenous Yellowtail brood catfish, <i>Pangasius pangasius</i> (Hamilton, 1822)</span>
+      <span class="a">Rahman, M.A., <b>Manon, M.R.K.</b>, Ullah, M.R., Alam, A., Islam, M.J., Siddik, M.A.B., Iqbal, M.M.</span>
+      <span class="v"><i>Environmental Science and Pollution Research</i> (2023) · <a href="https://doi.org/10.1007/s11356-023-28328-9" target="_blank">DOI</a></span>
+    </li>
+    <li>
+      <span class="t">Early Brood Development of Carp Fishes Utilizing Greenhouse Technology in Winter Seasons</span>
+      <span class="a">Mondal, M.A.H., Sikdar, M.M.H., <b>Manon, M.R.K.</b>, Saha, N., Roy, P.</span>
+      <span class="v"><i>European Journal of Agriculture and Food Sciences</i> 5 (2023) 72–78 · <a href="https://doi.org/10.24018/ejfood.2023.5.2.653" target="_blank">DOI</a></span>
+    </li>
+    <li>
+      <span class="t">Temporal distribution of fishery resources in Payra River: relationship with climatological changes, ecological assessment, and threat assessment</span>
+      <span class="a">Rahaman Rahat, M.A., Roy, N., <b>Khan Manon, M.R.</b>, Ullah, M.R., Islam, M.M., Rashid, M.T., Hasan, K.R., Chakma, S., Rahman, M.A.</span>
+      <span class="v"><i>Heliyon</i> 8 (2022) e10584 · <a href="https://doi.org/10.1016/j.heliyon.2022.e10584" target="_blank">DOI</a></span>
+    </li>
+  </ol>
+  <p style="margin-top:1.2rem;font-size:.9rem;color:var(--muted)">Full and up-to-date list on <a href="https://scholar.google.com/citations?user=k_8nOP8AAAAJ&hl=en" target="_blank">Google Scholar</a>.</p>
+</section>
+
+<section id="awards">
+  <h2>Honours &amp; Awards</h2>
+  <div class="grid2">
+    <div class="card">
+      <h3>People's Choice Award, Best Poster</h3>
+      <p>RMIT School of Science Research Day 2026, RMIT University</p>
+    </div>
+    <div class="card">
+      <h3>National Science and Technology (NST) Fellowship</h3>
+      <p>Ministry of Science and Technology, Bangladesh · 2023–2024</p>
+    </div>
+    <div class="card">
+      <h3>Research Society Research Scholarship</h3>
+      <p>Research Society · 2024</p>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills">
+    <div><span>Data &amp; statistics</span><p>R, IBM SPSS, GraphPad Prism, Python, Microsoft Excel</p></div>
+    <div><span>Spatial &amp; survey</span><p>ArcGIS, GIS &amp; remote sensing, KoBo Toolbox</p></div>
+    <div><span>Graphics</span><p>Adobe Illustrator, Adobe Photoshop</p></div>
+    <div><span>Languages</span><p>Bangla (native), English (academic)</p></div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p class="lead">I am happy to hear from researchers interested in invertebrate behaviour, behavioural ecotoxicology, or microplastics in aquatic systems.</p>
+  <div class="chips" style="margin-top:1.2rem">
+    <a class="chip primary" href="mailto:rased.khan2274@gmail.com">rased.khan2274@gmail.com</a>
+    <span class="chip">Neurotoxicology Laboratory, School of Science, RMIT University, Melbourne VIC, Australia</span>
+  </div>
+</section>
+
+</main>
+
+<footer>© 2026 Md. Rased Khan Manon · Last updated November 2026</footer>
+
+</body>
+</html>
